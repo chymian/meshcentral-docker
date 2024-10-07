@@ -15,7 +15,7 @@ services:
       - MONGODB_NAME=meshcentral
       - DB_ENCRYPT_KEY=${DB_ENCRYPT_KEY}
       - AGENT_PORT=8800
-      - CERT=${COOLIFY_FQDN}
+      - CERT=${CERT_FQDN}
     ports:
       - 8800:8800
       # - 80:80
