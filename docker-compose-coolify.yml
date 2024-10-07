@@ -2,7 +2,7 @@ version: '2'
 # This is example 3 from the documentation
 services:
   meshcentral:
-    container_name: meshcentral
+ #   container_name: meshcentral
     image: ghcr.io/gurucomputing/meshcentral-docker:latest
     restart: "always"
     volumes:
@@ -22,17 +22,17 @@ services:
       - 8800:8800
       # - 80:80
       # - 443:443
-    networks:
-      - meshcentral-nw
+ #   networks:
+ #     - meshcentral-nw
   meshcentral-db:
-    container_name: meshcentral-db
+ #   container_name: meshcentral-db
     image: mongo:latest
     restart: "always"
     volumes:
       - ./container-data/db:/data/db
       - /etc/localtime:/etc/localtime:ro
-    # ports:
-    #   - 27017:27017
+    expose:
+      - 27017
     networks:
       - meshcentral-nw
 
