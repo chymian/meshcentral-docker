@@ -31,8 +31,8 @@ services:
     volumes:
       - ./container-data/db:/data/db
       - /etc/localtime:/etc/localtime:ro
-    expose:
-      - 27017
+#    expose:
+#      - 27017
 #    networks:
 #      - meshcentral-nw
 
